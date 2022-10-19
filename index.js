@@ -32,9 +32,10 @@ app.get('/', (req, res) => {
   })
 })
 
-// bring in authors and articles controllers
+// bring in authors and articles controllers + comments controller
 app.use('/authors', require('./controllers/authors'))
 app.use('/articles', require('./controllers/articles'))
+
 
 app.listen(port, () => {
   rowdy.print()
